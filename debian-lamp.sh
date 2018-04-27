@@ -136,7 +136,7 @@ fi
 
 # Emails verifications
 
-if [ "$admin_mail" = 'pali@christophe-casalegno.com' ]
+if [ "$admin_mail" = 'r.ocampo@xchangebiz.net' ]
 
 then
 	echo -e "${RED} [ ERROR ]" "${NC} admin email address has not been setuped, please setup it or use -a option"
