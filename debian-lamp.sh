@@ -7,8 +7,8 @@ apt-get update
 MYSQL_ROOT_PASSWORD=$(tr -cd '[:alnum:]' < /dev/urandom | fold -w8 | head -n1)
 
 #Set the password so you don't have to enter it during installation
-debconf-set-selections <<< "mysql-server mysql-server/root_password password $MYSQL_ROOT_PASSWORD"
-debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"
+debconf-set-selections "mysql-server mysql-server/root_password password $MYSQL_ROOT_PASSWORD"
+debconf-set-selections "mysql-server mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"
 
 #Tools
 apt-get install htop vim -y
